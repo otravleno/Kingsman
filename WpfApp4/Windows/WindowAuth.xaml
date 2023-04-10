@@ -42,7 +42,7 @@
                     Width="150"
                     Height="40"
                     Margin="0 100 0 0" 
-                    />
+                   />
         </StackPanel>
 
         <TextBlock x:Name="BtnReg" 
@@ -52,6 +52,6 @@
                    Margin="0 0 0 8"
                    FontSize="16"
                    Foreground="DarkBlue" 
-                  />
+                 />
     </Grid>
 </Window>

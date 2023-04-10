@@ -55,8 +55,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Windows\WindowAddService.xaml.cs">
+      <DependentUpon>WindowAddService.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\WindowAuth.xaml.cs">
       <DependentUpon>WindowAuth.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\WindowEditService.xaml.cs">
+      <DependentUpon>WindowEditService.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\WindowRegistration.xaml.cs">
+      <DependentUpon>WindowRegistration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\WindowService.xaml.cs">
+      <DependentUpon>WindowService.xaml</DependentUpon>
     </Compile>
     <Page Include="Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -70,7 +82,23 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Windows\WindowAddService.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\WindowAuth.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\WindowEditService.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\WindowRegistration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\WindowService.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -100,6 +128,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\defImg.jpeg" />
+    <Resource Include="Res\icons8-add-80.png" />
+    <Resource Include="Res\icons8-edit-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\ImageService\bezhevyy-kostyum-troyka.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DB\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
