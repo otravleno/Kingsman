@@ -8,6 +8,14 @@
         Title="WindowAuth"     Height="600" 
         Width="400"
         WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF796BA3" Offset="0.41"/>
+            <GradientStop Color="#FFFFD7D7" Offset="1"/>
+            <GradientStop Color="#FF806C6C" Offset="1"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
         <StackPanel VerticalAlignment="Center">
             <TextBlock Text="Авторизация"
@@ -41,7 +49,7 @@
                     FontSize="18"                    
                     Width="150"
                     Height="40"
-                    Margin="0 100 0 0" 
+                    Margin="0 100 0 0" Click="BtnSignIn_Click_1" Background="White" FontFamily="Corbel Light" Padding="2,1,1,1" MinWidth="0" ScrollViewer.VerticalScrollBarVisibility="Disabled" UseLayoutRounding="False" OpacityMask="#FF464646" 
                    />
         </StackPanel>
 
