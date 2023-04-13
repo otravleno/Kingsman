@@ -20,14 +20,22 @@
         <StackPanel VerticalAlignment="Center">
             <TextBlock Text="Авторизация"
                        FontSize="28"
-                       FontWeight="Bold"
                        HorizontalAlignment="Center"
-                       Margin="0 30 0 0"/>
+                       Margin="0 30 0 0" FontFamily="Candara" FontWeight="Bold"/>
 
             <TextBlock Text="Введите логин"
                        FontSize="18"
                        HorizontalAlignment="Center"
-                       Margin="0 100 0 0"/>
+                       Margin="0 100 0 0" FontFamily="Candara Light">
+                <TextBlock.Effect>
+                    <BlurEffect/>
+                </TextBlock.Effect>
+            </TextBlock>
+            <TextBlock Text="Введите логин"
+                FontSize="18"
+                FontFamily="Candara Light" TextAlignment="Center">
+
+            </TextBlock>
             <TextBox x:Name="TbLogin"
                      FontSize="18"                    
                      Width="200"
@@ -37,7 +45,16 @@
             <TextBlock Text="Введите пароль"
                        FontSize="18"
                        HorizontalAlignment="Center"
-                       Margin="0 16 0 0"/>
+                       Margin="0 16 0 0" FontFamily="Candara Light">
+                <TextBlock.Effect>
+                    <BlurEffect/>
+                </TextBlock.Effect>
+            </TextBlock>
+            <TextBlock Text="Введите пароль"
+                FontSize="18"
+                FontFamily="Candara Light" TextAlignment="Center">
+               
+            </TextBlock>
             <PasswordBox x:Name="PbPassword"
                          FontSize="18"                    
                          Width="200"
@@ -49,8 +66,17 @@
                     FontSize="18"                    
                     Width="150"
                     Height="40"
-                    Margin="0 100 0 0" Click="BtnSignIn_Click_1" Background="White" FontFamily="Corbel Light" Padding="2,1,1,1" MinWidth="0" ScrollViewer.VerticalScrollBarVisibility="Disabled" UseLayoutRounding="False" OpacityMask="#FF464646" 
-                   />
+                    Margin="0 100 0 0" Click="BtnSignIn_Click_1" FontFamily="Candara Light" Padding="2,1,1,1" MinWidth="0" ScrollViewer.VerticalScrollBarVisibility="Disabled" UseLayoutRounding="False" RenderTransformOrigin="1,1" OpacityMask="#FF464646" 
+                   >
+                <Button.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FFC2A6BF" Offset="1"/>
+                        <GradientStop Color="White" Offset="0.141"/>
+                        <GradientStop Color="#FF9E9E9E" Offset="0"/>
+                        <GradientStop Color="White" Offset="0"/>
+                    </RadialGradientBrush>
+                </Button.Background>
+            </Button>
         </StackPanel>
 
         <TextBlock x:Name="BtnReg" 
@@ -59,7 +85,7 @@
                    Text="Регистрация"
                    Margin="0 0 0 8"
                    FontSize="16"
-                   Foreground="DarkBlue" 
+                   Foreground="DarkBlue" FontFamily="Candara" 
                  />
     </Grid>
 </Window>
