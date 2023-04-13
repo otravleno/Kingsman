@@ -19,9 +19,60 @@ namespace WpfApp4.Windows
     /// </summary>
     public partial class WindowEditService : Window
     {
+        DB.Service editService = null;
+
+        private bool isEdit = false;
+
         public WindowEditService()
         {
             InitializeComponent();
+            isEdit = false;
         }
+
+        public WindowEditService(DB.Service service)
+        {
+            InitializeComponent();
+
+            isEdit = true;
+
+            editService = service;
+
+            // Заполнение типа услуги
+
+            CmbTypeService.ItemsSource = ClassHelper.EF.Context.ServiceType.ToList();
+            CmbTypeService.DisplayMemberPath = "TypeName";
+
+            // выгрузка изображения 
+            ImgImageService.Source = new BitmapImage(new Uri(service.Image));
+
+            // заполнение полей
+            TbNameService.Text = service.ServiceName;
+            TbDiscService.Text = service.Description;
+            TbPriceService.Text = Convert.ToString(service.Price);
+
+            // заполнение типа услуги
+            CmbTypeService.SelectedItem = ClassHelper.EF.Context.ServiceType.Where(i => i.ID == service.ServiceTypeID).FirstOrDefault();
+
+        }
+
+        private void BtnEditService_Click(object sender, RoutedEventArgs e)
+        {
+
+
+            // валидация
+
+            editService.ServiceName = TbNameService.Text;
+            editService.Description = TbDiscService.Text;
+            editService.Price = Convert.ToDecimal(TbPriceService.Text);
+            editService.ServiceTypeID = (CmbTypeService.SelectedItem as DB.ServiceType).ID;
+
+            ClassHelper.EF.Context.SaveChanges();
+
+            MessageBox.Show("Данные успешно сохранны");
+
+            this.Close();
+        }
+
+
     }
 }

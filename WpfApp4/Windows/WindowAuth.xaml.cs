@@ -24,28 +24,28 @@ namespace WpfApp4.Windows
             InitializeComponent();
         }
 
-        //private void BtnSignIn_Click(object sender, RoutedEventArgs e)
-        //{
-        //    // проверка на наличие пользователя
-        //    var userAuth = ClassHelper.EF.Context.Employee.ToList().
-        //        Where(i => i.Login == TbLogin.Text && i.Password == PbPassword.Password).
-        //        FirstOrDefault();
-        //    if (userAuth != null)
-        //    {
-        //        // переход на окно список услуг
-        //        WindowService serviceWindow = new WindowService();
-        //        serviceWindow.Show();
-        //        this.Close();
-        //    }
-        //    else
-        //    {
-        //        // если пользователь не найден
-        //        MessageBox.Show("Пользователя не существует", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-        //    }
+        private void BtnSignIn_Click(object sender, RoutedEventArgs e)
+        {
+            // проверка на наличие пользователя
+            var userAuth = ClassHelper.EF.Context.Employee.ToList().
+                Where(i => i.Login == TbLogin.Text && i.Password == PbPassword.Password).
+                FirstOrDefault();
+            if (userAuth != null)
+            {
+                // переход на окно список услуг
+                WindowService serviceWindow = new WindowService();
+                serviceWindow.Show();
+                this.Close();
+            }
+            else
+            {
+                // если пользователь не найден
+                MessageBox.Show("Пользователя не существует", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
 
 
 
-        //}
+        }
 
         private void BtnReg_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
