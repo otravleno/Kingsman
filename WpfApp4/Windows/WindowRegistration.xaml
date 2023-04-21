@@ -8,6 +8,14 @@
         Title="WindowRegistration" Height="1000" 
         Width="500"
         WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF796BA3" Offset="0.41"/>
+            <GradientStop Color="#FFFFD7D7" Offset="1"/>
+            <GradientStop Color="#FF806C6C" Offset="1"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
 
         <StackPanel VerticalAlignment="Center">
@@ -93,7 +101,16 @@
                     Width="150"
                     Height="40"
                     Margin="0 40 0 0"
-                  />
+                  >
+                <Button.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FFC2A6BF" Offset="1"/>
+                        <GradientStop Color="White" Offset="0.141"/>
+                        <GradientStop Color="#FF9E9E9E" Offset="0"/>
+                        <GradientStop Color="White" Offset="0"/>
+                    </RadialGradientBrush>
+                </Button.Background>
+            </Button>
         </StackPanel>
 
         <TextBlock x:Name="BtnAuth" 

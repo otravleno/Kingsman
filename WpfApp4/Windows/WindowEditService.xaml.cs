@@ -68,11 +68,14 @@ namespace WpfApp4.Windows
 
             ClassHelper.EF.Context.SaveChanges();
 
-            MessageBox.Show("Данные успешно сохранны");
+            MessageBox.Show("Данные успешно сохранены");
 
             this.Close();
         }
 
+        private void BtnEditService_Click_1(object sender, RoutedEventArgs e)
+        {
 
+        }
     }
 }

@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp4.Windows"
         mc:Ignorable="d"
-        Title="WindowAuth"     Height="600" 
-        Width="400"
-        WindowStartupLocation="CenterScreen">
+        Title="WindowAuth"  Height="600"  Width="400" AllowsTransparency="True" WindowStyle="None"
+     
+    WindowStartupLocation="CenterScreen" >
+    
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FF796BA3" Offset="0.41"/>
