@@ -16,6 +16,7 @@
             <GradientStop Color="White" Offset="1"/>
         </LinearGradientBrush>
     </Window.Background>
+    <!--kjk,,-->
     <Grid>
         <Image Height="1984" Source="/Снимок экрана 2023-04-21 121411.png" Width="1095" Stretch="Fill" Opacity="0.59"/>
         <StackPanel VerticalAlignment="Center">

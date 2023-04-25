@@ -55,6 +55,30 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Res\Windows\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Res\Windows\WindowAddService.xaml.cs">
+      <DependentUpon>WindowAddService.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Res\Windows\WindowAuth.xaml.cs">
+      <DependentUpon>WindowAuth.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Res\Windows\WindowCart.xaml.cs">
+      <DependentUpon>WindowCart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Res\Windows\WindowEditService.xaml.cs">
+      <DependentUpon>WindowEditService.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Res\Windows\WindowRegistration.xaml.cs">
+      <DependentUpon>WindowRegistration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Res\Windows\WindowService.xaml.cs">
+      <DependentUpon>WindowService.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\WindowAddService.xaml.cs">
       <DependentUpon>WindowAddService.xaml</DependentUpon>
     </Compile>
@@ -77,6 +101,38 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Res\Windows\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Res\Windows\WindowAddService.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Res\Windows\WindowAuth.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Res\Windows\WindowCart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Res\Windows\WindowEditService.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Res\Windows\WindowRegistration.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Res\Windows\WindowService.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\WindowAddService.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -137,11 +193,33 @@
     <Resource Include="Res\ImageService\bezhevyy-kostyum-troyka.jpeg" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="ClassHelper\" />
     <Folder Include="DB\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Res\ImageService\icons8-remove-50.png" />
     <Resource Include="Res\ImageService\icons8-shopping-cart-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Снимок экрана 2023-04-21 121028-PhotoRoom.png-PhotoRoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Снимок экрана 2023-04-21 121411.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Снимок экрана 2023-04-21 121759.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Снимок экрана 2023-04-21 121048.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Снимок экрана 2023-04-21 120925-PhotoRoom.png-PhotoRoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Снимок экрана 2023-04-21 121323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Снимок экрана 2023-04-21 121537-PhotoRoom.png-PhotoRoom.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
