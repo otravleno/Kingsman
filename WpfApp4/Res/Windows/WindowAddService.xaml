@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="WindowAddService" WindowStartupLocation="CenterScreen"
         Height="800" Width="500">
+    <!--tryr-->
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FF796BA3" Offset="0.41"/>
