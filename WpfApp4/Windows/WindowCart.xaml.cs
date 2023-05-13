@@ -17,37 +17,37 @@ namespace WpfApp4.Windows
     /// <summary>
     /// Логика взаимодействия для WindowCart.xaml
     /// </summary>
-    public partial class WindowCart : Window
+    public partial class WindowCart : Windows
     {
-        public WindowCart()
-        {
-            InitializeComponent();
-            GetListServise();
-        }
+        //public WindowCart()
+        //{
+        //    InitializeComponent();
+        //    GetListServise();
+        //}
 
-        private void GetListServise()
-        {
-            LvCartService.ItemsSource = ClassHelper.CartServiceClass.ServiceCart;
+        //private void GetListServise()
+        //{
+        //    LvCartService.ItemsSource = ClassHelper.CartServiceClass.ServiceCart;
 
-        }
+        //}
 
-        private void BtnRomoveToCart_Click(object sender, RoutedEventArgs e)
-        {
-            var button = sender as Button;
-            if (button == null)
-            {
-                return;
-            }
-            var service = button.DataContext as DB.Service; // получаем выбранную запись
+        //private void BtnRomoveToCart_Click(object sender, RoutedEventArgs e)
+        //{
+        //    var button = sender as Button;
+        //    if (button == null)
+        //    {
+        //        return;
+        //    }
+        //    var service = button.DataContext as DB.Service; // получаем выбранную запись
 
-            ClassHelper.CartServiceClass.ServiceCart.Remove(service);
+        //    ClassHelper.CartServiceClass.ServiceCart.Remove(service);
 
-            GetListServise();
-        }
+        //    GetListServise();
+        //}
 
-        private void BtnBack_Click(object sender, RoutedEventArgs e)
-        {
+        //private void BtnBack_Click(object sender, RoutedEventArgs e)
+        //{
 
-        }
+        //}
     }
 }

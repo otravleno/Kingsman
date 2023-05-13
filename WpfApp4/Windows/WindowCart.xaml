@@ -40,7 +40,7 @@
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
                    FontSize="30"
-                   FontWeight="Bold"/>
+                   FontWeight="Bold" FontFamily="Cambria"/>
         <ListView x:Name="LvCartService" 
                   Grid.Row="2" 
                   d:ItemsSource="{d:SampleData ItemCount=5}"
@@ -93,7 +93,7 @@
                                     Margin="30 5 0 0"
                                     Background="{x:Null}"
                                     BorderThickness="0"
-                                    Click="BtnRomoveToCart_Click">
+                                   >
                                     <Image Source="/Res/ImageService/icons8-remove-50.png" />
                                 </Button>
                             </WrapPanel>
@@ -107,16 +107,29 @@
 
 
         <Button x:Name="BtnBack"
-                Content="Назад"
-                Grid.Row="3"
-                Width="100"
-                Height="40"
-                Background="{x:Null}"
-                BorderThickness="0"
-                HorizontalAlignment="Right"
-                >
-
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left"
+                            Width="70"
+                            Height="30"
+                            Content="Назад"
+                            Margin="927,0,0,0"
+                            Click="BtnBack_Click"
+                            Grid.Row="3" RenderTransformOrigin="1.474,0.929" FontFamily="Candara"
+                            >
+            <Button.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FFC2A6BF" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.141"/>
+                    <GradientStop Color="#FF9E9E9E" Offset="0"/>
+                    <GradientStop Color="White" Offset="0"/>
+                </RadialGradientBrush>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="7"/>
+                </Style>
+            </Button.Resources>
         </Button>
-        
+
     </Grid>
 </Window>

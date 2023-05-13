@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace WpfApp4.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для ClientWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ClientWindow : Windows
     {
-        public MainWindow()
+        public ClientWindow()
         {
             InitializeComponent();
         }

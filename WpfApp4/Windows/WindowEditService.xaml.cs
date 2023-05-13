@@ -14,68 +14,70 @@ using System.Windows.Shapes;
 
 namespace WpfApp4.Windows
 {
-    /// <summary>
-    /// Логика взаимодействия для WindowEditService.xaml
-    /// </summary>
-    public partial class WindowEditService : Window
+  
+    public partial class WindowEditService : Windows
     {
-        DB.Service editService = null;
-
-        private bool isEdit = false;
-
         public WindowEditService()
         {
             InitializeComponent();
-            isEdit = false;
         }
+        //    DB.Service editService = null;
 
-        public WindowEditService(DB.Service service)
-        {
-            InitializeComponent();
+        //    private bool isEdit = false;
 
-            isEdit = true;
+        //    public WindowEditService()
+        //    {
+        //        InitializeComponent();
+        //        isEdit = false;
+        //    }
 
-            editService = service;
+        //    public WindowEditService(DB.Service service)
+        //    {
+        //        InitializeComponent();
 
-            // Заполнение типа услуги
+        //        isEdit = true;
 
-            CmbTypeService.ItemsSource = ClassHelper.EF.Context.ServiceType.ToList();
-            CmbTypeService.DisplayMemberPath = "TypeName";
+        //        editService = service;
 
-            // выгрузка изображения 
-            ImgImageService.Source = new BitmapImage(new Uri(service.Image));
+        //        // Заполнение типа услуги
 
-            // заполнение полей
-            TbNameService.Text = service.ServiceName;
-            TbDiscService.Text = service.Description;
-            TbPriceService.Text = Convert.ToString(service.Price);
+        //        CmbTypeService.ItemsSource = ClassHelper.EF.Context.ServiceType.ToList();
+        //        CmbTypeService.DisplayMemberPath = "TypeName";
 
-            // заполнение типа услуги
-            CmbTypeService.SelectedItem = ClassHelper.EF.Context.ServiceType.Where(i => i.ID == service.ServiceTypeID).FirstOrDefault();
+        //        // выгрузка изображения 
+        //        ImgImageService.Source = new BitmapImage(new Uri(service.Image));
 
-        }
+        //        // заполнение полей
+        //        TbNameService.Text = service.ServiceName;
+        //        TbDiscService.Text = service.Description;
+        //        TbPriceService.Text = Convert.ToString(service.Price);
 
-        private void BtnEditService_Click(object sender, RoutedEventArgs e)
-        {
+        //        // заполнение типа услуги
+        //        CmbTypeService.SelectedItem = ClassHelper.EF.Context.ServiceType.Where(i => i.ID == service.ServiceTypeID).FirstOrDefault();
+
+        //    }
+
+        //    private void BtnEditService_Click(object sender, RoutedEventArgs e)
+        //    {
 
 
-            // валидация
+        //        // валидация
 
-            editService.ServiceName = TbNameService.Text;
-            editService.Description = TbDiscService.Text;
-            editService.Price = Convert.ToDecimal(TbPriceService.Text);
-            editService.ServiceTypeID = (CmbTypeService.SelectedItem as DB.ServiceType).ID;
+        //        editService.ServiceName = TbNameService.Text;
+        //        editService.Description = TbDiscService.Text;
+        //        editService.Price = Convert.ToDecimal(TbPriceService.Text);
+        //        editService.ServiceTypeID = (CmbTypeService.SelectedItem as DB.ServiceType).ID;
 
-            ClassHelper.EF.Context.SaveChanges();
+        //        ClassHelper.EF.Context.SaveChanges();
 
-            MessageBox.Show("Данные успешно сохранены");
+        //        MessageBox.Show("Данные успешно сохранены");
 
-            this.Close();
-        }
+        //        this.Close();
+        //    }
 
-        private void BtnEditService_Click_1(object sender, RoutedEventArgs e)
-        {
+        //    private void BtnEditService_Click_1(object sender, RoutedEventArgs e)
+        //    {
 
-        }
+        //    }
     }
 }

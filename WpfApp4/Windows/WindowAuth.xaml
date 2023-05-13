@@ -23,7 +23,7 @@
             <TextBlock Text="Авторизация"
                        FontSize="28"
                        HorizontalAlignment="Center"
-                       Margin="0 30 0 0" FontFamily="Candara" FontWeight="Bold"/>
+                       Margin="0 30 0 0" FontFamily="Cambria" FontWeight="Bold"/>
 
             <TextBlock Text="Введите логин"
                        FontSize="18"
@@ -35,7 +35,7 @@
             </TextBlock>
             <TextBlock Text="Введите логин"
                 FontSize="18"
-                FontFamily="Candara Light" TextAlignment="Center">
+                FontFamily="Corbel" TextAlignment="Center">
 
             </TextBlock>
             <TextBox x:Name="TbLogin"
@@ -55,7 +55,7 @@
 
             <TextBlock Text="Введите пароль"
                 FontSize="18"
-                FontFamily="Candara Light" TextAlignment="Center">
+                FontFamily="Corbel" TextAlignment="Center">
 
             </TextBlock>
             <PasswordBox x:Name="PbPassword"
@@ -69,7 +69,7 @@
                     FontSize="18"                    
                     Width="150"
                     Height="40"
-                    Margin="0 100 0 0" Click="BtnSignIn_Click_1" FontFamily="Candara Light" Padding="2,1,1,1" MinWidth="0" ScrollViewer.VerticalScrollBarVisibility="Disabled" UseLayoutRounding="False" RenderTransformOrigin="1,1" OpacityMask="#FF464646" 
+                    Margin="0 100 0 0" FontFamily="Candara" Padding="2,1,1,1" MinWidth="0" ScrollViewer.VerticalScrollBarVisibility="Disabled" UseLayoutRounding="False" RenderTransformOrigin="1,1" OpacityMask="#FF464646" 
                    >
                 <Button.Background>
                     <RadialGradientBrush>
@@ -79,6 +79,11 @@
                         <GradientStop Color="White" Offset="0"/>
                     </RadialGradientBrush>
                 </Button.Background>
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="7"/>
+                    </Style>
+                </Button.Resources>
             </Button>
         </StackPanel>
 
@@ -88,7 +93,7 @@
                    Text="Регистрация"
                    Margin="0 0 0 8"
                    FontSize="16"
-                   Foreground="DarkBlue" FontFamily="Candara" 
+                   Foreground="DarkBlue" FontFamily="Corbel" 
                  />
     </Grid>
 </Window>

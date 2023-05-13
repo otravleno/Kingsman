@@ -12,21 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WpfApp4.Windows
+namespace WpfApp4.Window
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для WindowEmpl.xaml
     /// </summary>
-    public partial class MainWindow : Windows
+    public partial class WindowEmpl : Windows
     {
-        public MainWindow()
+        public WindowEmpl()
         {
             InitializeComponent();
-        }
-
-        private void BtnEmployees_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

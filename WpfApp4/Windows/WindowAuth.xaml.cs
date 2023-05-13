@@ -17,46 +17,46 @@ namespace WpfApp4.Windows
     /// <summary>
     /// Логика взаимодействия для WindowAuth.xaml
     /// </summary>
-    public partial class WindowAuth : Window
+    public partial class WindowAuth : Windows
     {
-        public WindowAuth()
-        {
-            InitializeComponent();
-        }
+        //public WindowAuth()
+        //{
+        //    InitializeComponent();
+        //}
 
-        private void BtnSignIn_Click(object sender, RoutedEventArgs e)
-        {
-            // проверка на наличие пользователя
-            var userAuth = ClassHelper.EF.Context.Employee.ToList().
-                Where(i => i.Login == TbLogin.Text && i.Password == PbPassword.Password).
-                FirstOrDefault();
-            if (userAuth != null)
-            {
-                // переход на окно список услуг
-                WindowService serviceWindow = new WindowService();
-                serviceWindow.Show();
-                this.Close();
-            }
-            else
-            {
-                // если пользователь не найден
-                MessageBox.Show("Пользователя не существует", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+        //private void BtnSignIn_Click(object sender, RoutedEventArgs e)
+        //{
+        //    // проверка на наличие пользователя
+        //    var userAuth = ClassHelper.EF.Context.Employee.ToList().
+        //        Where(i => i.Login == TbLogin.Text && i.Password == PbPassword.Password).
+        //        FirstOrDefault();
+        //    if (userAuth != null)
+        //    {
+        //        // переход на окно список услуг
+        //        WindowService serviceWindow = new WindowService();
+        //        serviceWindow.Show();
+        //        this.Close();
+        //    }
+        //    else
+        //    {
+        //        // если пользователь не найден
+        //        MessageBox.Show("Пользователя не существует", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+        //    }
 
 
 
-        }
+        //}
 
-        private void BtnReg_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            WindowRegistration registrationWindow = new WindowRegistration();
-            registrationWindow.Show();
-            this.Close();
-        }
+        //private void BtnReg_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        //{
+        //    WindowRegistration registrationWindow = new WindowRegistration();
+        //    registrationWindow.Show();
+        //    this.Close();
+        //}
 
-        private void BtnSignIn_Click_1(object sender, RoutedEventArgs e)
-        {
+        //private void BtnSignIn_Click_1(object sender, RoutedEventArgs e)
+        //{
 
-        }
+        //}
     }
 }

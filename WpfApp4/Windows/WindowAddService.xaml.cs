@@ -18,54 +18,54 @@ namespace WpfApp4.Windows
     /// <summary>
     /// Логика взаимодействия для WindowAddService.xaml
     /// </summary>
-    public partial class WindowAddService : Window
+    public partial class WindowAddService : Windows
     {
-        private string pathImage = null;
-        public WindowAddService()
-        {
-            InitializeComponent();
-            CmbTypeService.ItemsSource = ClassHelper.EF.Context.ServiceType.ToList();
-            CmbTypeService.DisplayMemberPath = "TypeName";
-            CmbTypeService.SelectedIndex = 0;
-        }
+        ////private string pathImage = null;
+        ////public WindowAddService()
+        ////{
+        ////    InitializeComponent();
+        ////    CmbTypeService.ItemsSource = ClassHelper.EF.Context.ServiceType.ToList();
+        ////    CmbTypeService.DisplayMemberPath = "TypeName";
+        ////    CmbTypeService.SelectedIndex = 0;
+        ////}
 
-        private void BtnChooseImage_Click(object sender, RoutedEventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            if (openFileDialog.ShowDialog() == true)
-            {
-                ImgImageService.Source = new BitmapImage(new Uri(openFileDialog.FileName));
+        //private void BtnChooseImage_Click(object sender, RoutedEventArgs e)
+        //{
+        //    OpenFileDialog openFileDialog = new OpenFileDialog();
+        //    if (openFileDialog.ShowDialog() == true)
+        //    {
+        //        ImgImageService.Source = new BitmapImage(new Uri(openFileDialog.FileName));
 
-                pathImage = openFileDialog.FileName;
-            }
-        }
+        //        pathImage = openFileDialog.FileName;
+        //    }
+        //}
 
-        private void BtnAddService_Click(object sender, RoutedEventArgs e)
-        {
+        //private void BtnAddService_Click(object sender, RoutedEventArgs e)
+        //{
 
-            //валидация 
+        //    //валидация 
 
-            // добавление услуги
-            DB.Service newService = new DB.Service();
+        //    // добавление услуги
+        //    DB.Service newService = new DB.Service();
 
-            newService.Price = Convert.ToDecimal(TbPriceService.Text);
-            newService.ServiceName = TbNameService.Text;
-            newService.Description = TbDiscService.Text;
-            newService.ServiceTypeID = (CmbTypeService.SelectedItem as DB.ServiceType).ID;
-            if (pathImage != null)
-            {
-                newService.Image = pathImage;
-            }
+        //    newService.Price = Convert.ToDecimal(TbPriceService.Text);
+        //    newService.ServiceName = TbNameService.Text;
+        //    newService.Description = TbDiscService.Text;
+        //    newService.ServiceTypeID = (CmbTypeService.SelectedItem as DB.ServiceType).ID;
+        //    if (pathImage != null)
+        //    {
+        //        newService.Image = pathImage;
+        //    }
 
-            ClassHelper.EF.Context.Service.Add(newService);
-            ClassHelper.EF.Context.SaveChanges();
+        //    ClassHelper.EF.Context.Service.Add(newService);
+        //    ClassHelper.EF.Context.SaveChanges();
 
-            MessageBox.Show("Услуга добавлена", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+        //    MessageBox.Show("Услуга добавлена", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
 
-            this.Close();
+        //    this.Close();
 
 
-        }
+        //}
     }
 }
 
